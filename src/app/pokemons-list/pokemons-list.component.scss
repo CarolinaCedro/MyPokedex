@@ -1,0 +1,54 @@
+.pokemon-container {
+  width: 260px;
+  min-height: 279px;
+  background: #74F271;
+  border-radius: .35rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: .5rem;
+  flex-direction: column;
+
+  .imagem-sombra {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+
+  img{
+    max-width: 140px;
+
+  }
+}
+
+.container {
+  margin: .5rem 1rem;
+
+}
+
+.pokemon-details-container {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-details-container button {
+  padding: .5rem 1rem;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: .35rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.pokemon-details-container button:hover{
+ background: #206120;
+
+}
+
+
