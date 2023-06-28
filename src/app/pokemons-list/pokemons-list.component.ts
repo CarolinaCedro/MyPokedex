@@ -9,6 +9,7 @@ import {PokedexService} from "../pokedex.service";
 export class PokemonsListComponent implements OnInit {
 
   public pokemons: any = []
+  public setPokemons: any = []
 
   constructor(private service: PokedexService) {
   }
@@ -17,10 +18,18 @@ export class PokemonsListComponent implements OnInit {
     this.service.pokemons.subscribe(
       res => {
         console.log(res.results)
-        this.pokemons = res.results
+        this.setPokemons = res.results
+        this.pokemons = this.setPokemons
       }
     )
   }
 
+  searchResult(value: string) {
+    const filter = this.setPokemons.filter((res: any) => {
+      return !res.name.indexOf(value.toLowerCase())
+    })
+
+    this.pokemons = filter
+  }
 
 }

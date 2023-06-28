@@ -1,6 +1,6 @@
 <div class="search-container">
-  <input>
-  <button>
+  <input #search (keyup)="emitValue(search.value)">
+  <button (click)="emitValue(search.value)">
     Pesquisar
   </button>
 </div>

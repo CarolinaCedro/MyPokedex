@@ -1,14 +1,44 @@
 <app-header></app-header>
 
-<section class="card">
-  <div class="card-header">
-    <img src="assets/pokebola.png" alt="Sua Foto">
-    <h1>Seu Nome</h1>
-  </div>
-  <ul class="attribute-list">
-    <li>Atributo 1</li>
-    <li>Atributo 2</li>
-    <li>Atributo 3</li>
-    <!-- Adicione mais atributos, se necessário -->
-  </ul>
-</section>
+<ng-template [ngIf]="hasResult">
+  <section>
+    <div class="card">
+      <div class="card-header">
+        <img  [src]="pokemon[0].sprites?.other?.dream_world?.front_default"
+              [alt]="pokemon[0].name">
+        <h1>{{pokemon[0].name}}</h1>
+      </div>
+      <div class="statistics-container">
+        <h3>Estatísticas</h3>
+      </div>
+      <article >
+        <section>
+
+          <ol>
+            <li *ngFor="let value of pokemon[0].stats" style="color: antiquewhite">
+              {{ value.stat.name }}
+
+              <strong style="color: #FFCB05;font-weight: 600">
+                {{ value.base_stat }}
+              </strong>
+            </li>
+            <div class="btn-back">
+              <a [routerLink]="['']" class="btn btn__secondary">
+                Voltar
+              </a>
+            </div>
+
+          </ol>
+
+
+        </section>
+
+
+      </article>
+
+    </div>
+  </section>
+
+</ng-template>
+
+

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-search-pokemon',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-pokemon.component.scss']
 })
 export class SearchPokemonComponent {
+
+  @Output() public emmitSearch: EventEmitter<string> = new EventEmitter();
+
+  emitValue(value: string) {
+    this.emmitSearch.emit(value)
+  }
+
 
 }

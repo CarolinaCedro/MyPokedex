@@ -6,9 +6,41 @@
 //  justify-content: center;
 //}
 
+section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5rem;
+}
+
+.btn-back {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    margin-top: 2rem;
+    text-decoration: none;
+    border-radius: .25rem;
+    color: white;
+    border: 1px solid white;
+    padding: .2rem 1rem;
+  }
+
+  a:hover {
+    background: white;
+    color: #960000;
+    border: #960000;
+  }
+}
+
 .card {
-  width: 300px;
-  background-color: #f2f2f2;
+  width: 600px;
+  height: 600px;
+  background-color: #960000;
   border-radius: 8px;
   padding: 16px;
 }
@@ -16,25 +48,52 @@
 .card-header {
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-height: 15rem;
 }
 
 .card-header img {
-  width: 80px;
-  height: 80px;
+  width: 190px;
+  height: 189px;
   border-radius: 50%;
+  background: white;
   margin-right: 16px;
+  border: 3px solid #FFCB05;
+  padding: .9rem;
+}
+
+.card-header h1 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .card-header h1 {
   font-size: 20px;
   font-weight: bold;
   margin: 0;
+  color:   #FFCB05;
+}
+
+.statistics-container {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .attribute-list {
+  width: 100%;
+  min-height: 5rem;
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   list-style: none;
-  padding: 0;
-  margin-top: 16px;
 }
 
 .attribute-list li {

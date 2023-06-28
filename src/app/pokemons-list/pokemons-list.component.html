@@ -1,13 +1,17 @@
+<div class="position-search">
+  <app-search-pokemon (emmitSearch)="searchResult($event)"></app-search-pokemon>
+</div>
+<ng-template ngFor let-pokemon [ngForOf]="pokemons">
 
-<ng-template  ngFor let-pokemon [ngForOf]="pokemons">
   <div class="container">
-    <a   class="pokemon-container" >
-      {{pokemon.status?.id}}
-      <img  [src]="pokemon.status?.sprites?.other?.dream_world?.front_default">
+    <a class="pokemon-container">
+      <img [src]="pokemon.status?.sprites?.other?.dream_world?.front_default">
       <h3>{{pokemon.name}}</h3>
       <div class="pokemon-details-container">
-        <button [routerLink]="['details',pokemon.status.id]">Detalhes</button>
+        <button [routerLink]="['details',pokemon.status?.id]">Detalhes</button>
       </div>
     </a>
   </div>
 </ng-template>
+
+

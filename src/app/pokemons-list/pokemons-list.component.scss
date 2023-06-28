@@ -48,7 +48,19 @@
 
 .pokemon-details-container button:hover{
  background: #206120;
-
 }
 
+.position-search{
+
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  app-search-pokemon{
+    width: 100%;
+  }
+}
 
